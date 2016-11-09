@@ -2,11 +2,11 @@
 object MatchTest{
 
   
-  
+  def getVal() : Int = { 100 }                    //> getVal: ()Int
   for {
     x <- Seq(1,2,2.7,"one","two",'four, 'five)
   }{
-    def getVal() : Int = { 100 }
+    
     val str = x match {
       case 1 => "int 1"
       case _: Int => "other int: "+x
