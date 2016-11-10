@@ -39,4 +39,12 @@ object hof2 {
                                                   //| res7: Int = 55
   
   List(List(1,2), List(3,4)).flatten              //> res8: List[Int] = List(1, 2, 3, 4)
+  
+  val nestedNumbers = List(List(1,2), List(3,4))  //> nestedNumbers  : List[List[Int]] = List(List(1, 2), List(3, 4))
+  nestedNumbers.map((x:List[Int]) => x.map(_*2)).flatten
+                                                  //> res9: List[Int] = List(2, 4, 6, 8)
+  nestedNumbers.flatMap(_.map(_*2))               //> res10: List[Int] = List(2, 4, 6, 8)
+  
+  
+  
 }

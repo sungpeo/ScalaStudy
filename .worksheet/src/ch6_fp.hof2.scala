@@ -16,5 +16,12 @@ object hof2 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; 
   numbers.foldLeft(0){ (m:Int, n:Int) => println("m: " + m + " n: " + n); m+n };System.out.println("""res6: Int = """ + $show(res$6));$skip(81); val res$7 = 
   numbers.foldRight(0){ (m:Int, n:Int) => println("m: " + m + " n: " + n); m+n };System.out.println("""res7: Int = """ + $show(res$7));$skip(40); val res$8 = 
   
-  List(List(1,2), List(3,4)).flatten;System.out.println("""res8: List[Int] = """ + $show(res$8))}
+  List(List(1,2), List(3,4)).flatten;System.out.println("""res8: List[Int] = """ + $show(res$8));$skip(52); 
+  
+  val nestedNumbers = List(List(1,2), List(3,4));System.out.println("""nestedNumbers  : List[List[Int]] = """ + $show(nestedNumbers ));$skip(57); val res$9 = 
+  nestedNumbers.map((x:List[Int]) => x.map(_*2)).flatten;System.out.println("""res9: List[Int] = """ + $show(res$9));$skip(36); val res$10 = 
+  nestedNumbers.flatMap(_.map(_*2));System.out.println("""res10: List[Int] = """ + $show(res$10))}
+  
+  
+  
 }
