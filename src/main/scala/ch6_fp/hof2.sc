@@ -10,6 +10,9 @@ object hof2 {
   numbers.dropWhile(_%2 != 0)                     //> res3: List[Int] = List(2, 3, 4, 5, 6, 7, 8, 9, 10)
   
   numbers.foldLeft(0)((m:Int, n:Int)=>m+n)        //> res4: Int = 55
+  
+  (100 /: List(1,2,3,4,5))(_+_)                   //> res5: Int = 115
+  
   numbers.foldLeft(0){ (m:Int, n:Int) => println("m: " + m + " n: " + n); m+n }
                                                   //> m: 0 n: 1
                                                   //| m: 1 n: 2
@@ -21,7 +24,7 @@ object hof2 {
                                                   //| m: 28 n: 8
                                                   //| m: 36 n: 9
                                                   //| m: 45 n: 10
-                                                  //| res5: Int = 55
+                                                  //| res6: Int = 55
   numbers.foldRight(0){ (m:Int, n:Int) => println("m: " + m + " n: " + n); m+n }
                                                   //> m: 10 n: 0
                                                   //| m: 9 n: 10
@@ -33,7 +36,7 @@ object hof2 {
                                                   //| m: 3 n: 49
                                                   //| m: 2 n: 52
                                                   //| m: 1 n: 54
-                                                  //| res6: Int = 55
+                                                  //| res7: Int = 55
   
-  List(List(1,2), List(3,4)).flatten              //> res7: List[Int] = List(1, 2, 3, 4)
+  List(List(1,2), List(3,4)).flatten              //> res8: List[Int] = List(1, 2, 3, 4)
 }
